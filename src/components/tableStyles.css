@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.table-container {
+  
+  max-width: 100%;
+  max-height: 500px; /* Adjust as needed */
+  overflow: auto;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #cea068;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #4caf4f;
+  color: white;
+  position: sticky;
+  top: 0;
+  text-align: left;
+}
+
+td {
+  text-align: left;
+  vertical-align: top;
+}
+
+.submit-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+style{
+  color: #9e29be69;
+}

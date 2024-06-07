@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import SidebarMenu from './components/sidemenu';
+import BlockRequest from './components/blockrequest';
+import { CssBaseline, IconButton } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import MenuIcon from '@mui/icons-material/Menu';
 
-function App() {
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1e3a8a',
+    },
+    background: {
+      default: '#f5f5f5',
+    },
+  },
+});
+
+const App = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <div style={{ display: 'flex' }}>
+        <IconButton
+          onClick={toggleDrawer}
+          sx={{ position: 'absolute', top: 16, left: 16 }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <MenuIcon />
+        </IconButton>
+        <SidebarMenu open={drawerOpen} toggleDrawer={toggleDrawer} />
+        <div style={{ flexGrow: 1, padding: '20px' }}>
+          <BlockRequest />
+        </div>
+      </div>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
