@@ -4,7 +4,7 @@ import BlockRequest from './components/blockrequest';
 import { CssBaseline, IconButton } from '@mui/material';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import Tables from './components/tables'
 const theme = createTheme({
   palette: {
     primary: {
@@ -26,7 +26,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div style={{ display: 'flex' }}>
+      {/* <div style={{ display: 'flex' }}>
         <IconButton
           onClick={toggleDrawer}
           sx={{ position: 'absolute', top: 16, left: 16 }}
@@ -37,7 +37,8 @@ const App = () => {
         <div style={{ flexGrow: 1, padding: '20px' }}>
           <BlockRequest />
         </div>
-      </div>
+      </div> */}
+      <Tables/>
     </ThemeProvider>
   );
 };

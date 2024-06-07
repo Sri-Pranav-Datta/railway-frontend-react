@@ -10,7 +10,7 @@ body {
   border: 1px solid #ddd;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: #cea068;
+  background-color: #fafafa;
 }
 
 table {
@@ -25,7 +25,7 @@ td {
 }
 
 th {
-  background-color: #4caf4f;
+  background-color: #75818e;
   color: white;
   position: sticky;
   top: 0;
@@ -40,7 +40,7 @@ td {
 .submit-button {
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: #4CAF50;
+  background-color: #3f92c5;
   color: white;
   border: none;
   border-radius: 4px;
